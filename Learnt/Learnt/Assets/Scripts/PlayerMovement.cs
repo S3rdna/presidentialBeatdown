@@ -39,5 +39,33 @@ public class PlayerMovement : MonoBehaviour
                 myRigidbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("PUNCH!");
+            Animator anim = gameObject.GetComponent<Animator>();
+            if (anim != null)
+            {
+                anim.SetTrigger("Punch");
+            }
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            Debug.Log("Right!");
+            Animator anim = gameObject.GetComponent<Animator>();
+            if (anim != null)
+            {
+                anim.SetTrigger("Right");
+            }
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            Debug.Log("LEFT!");
+            Animator anim = gameObject.GetComponent<Animator>();
+            if (anim != null)
+            {
+                anim.SetTrigger("Left");
+            }
+        }
     }
 }
