@@ -6,6 +6,7 @@ public class QuitSceneChange : MonoBehaviour
 {
     public void CloseGame()
     {
+        Debug.Log("Quit the game");
         Application.Quit();
     }
 }
