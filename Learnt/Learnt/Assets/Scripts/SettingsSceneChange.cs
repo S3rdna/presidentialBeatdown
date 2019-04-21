@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SettingsSceneChange : MonoBehaviour
 {
+    public GameObject mainMenuGroup;
+    public GameObject settingsGroup;
     public void SettingsClick()
     {
-        SceneManager.LoadScene("Settings");
+        // SceneManager.LoadScene("Settings");
+        mainMenuGroup.SetActive(false);
+        settingsGroup.SetActive(true);
+
     }
 }
